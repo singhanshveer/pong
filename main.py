@@ -128,8 +128,7 @@ def handle_paddle_movements(keys, left_paddle, right_paddle):
     if keys[pygame.K_DOWN] and right_paddle.y + right_paddle.VEL + right_paddle.height <= HEIGHT:
         right_paddle.move(up=False)
 
-
-def main():
+def handle_game_events():
     run = True
     clock = pygame.time.Clock()
 
@@ -183,6 +182,8 @@ def main():
 
     pygame.quit()
 
+def main():
+    handle_game_events()
 
 if __name__ == '__main__':
     main()
